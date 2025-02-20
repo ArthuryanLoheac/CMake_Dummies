@@ -1,0 +1,13 @@
+1 CMakeLists.txt par dossier et sous dossier
+https://shorturl.at/XAUw3
+
+Step1:
+
+# Generate the makefiles and cache files in the 'build' directory
+$ cmake . -B ./build -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+
+# Build the project using the configuration in 'build'
+$ cmake --build build
+
+# Running the executable should output something like this
+$ ./build/hello
