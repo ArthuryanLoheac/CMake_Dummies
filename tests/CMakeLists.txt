@@ -1,6 +1,10 @@
-add_executable(test_ikea test_ikea.c)
+set(TEST_SRC test_ikea.c)
 
-target_include_directories(test_ikea PRIVATE ${CRITERION_INCLUDE_DIRS})
-target_link_libraries(test_ikea PRIVATE ikea ${CRITERION_LIBRARIES})
+add_executable(unit_tests ${TEST_SRC})
 
-add_test(NAME test_ikea COMMAND test_ikea)
+target_include_directories(unit_tests PRIVATE ${CRITERION_INCLUDE_DIRS})
+target_link_libraries(unit_tests PRIVATE ikea ${CRITERION_LIBRARIES})
+
+set_target_properties(unit_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY ../../)
+
+add_test(NAME unit_tests COMMAND unit_tests)
