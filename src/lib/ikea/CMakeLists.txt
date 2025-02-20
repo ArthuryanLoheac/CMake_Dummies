@@ -4,8 +4,8 @@ cmake_minimum_required(VERSION 3.17.0)
 project(ikea)
 
 # Set the project folder variable
-set(INCROOT ../../include)
-set(SRCROOT ./)
+set(INCROOT ../../../include)
+set(SRCROOT .)
 
 #set the src folder
 set(SRC
